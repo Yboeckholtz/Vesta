@@ -1,5 +1,5 @@
 * {
-    font-size: 14px;
+    font-size: 12px;
 }
 .navbar {
     background-color: #0090e3;
@@ -41,10 +41,14 @@
     padding-left: 10px;
     height: 80%;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    max-height: 80vh;
 }
 .categoriesSection {
     padding-left: 0px;
     padding-right: 10px;
+    position: fixed;
+    width: 14%;
 }
 .categories{
     padding-left: 0px;
@@ -71,6 +75,8 @@
     display: none;
     height: 80%;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    max-height: 80vh;
 }
 .keyboardViewRow {
     padding-left: 10px;
@@ -102,12 +108,14 @@
     background-color: #22303e;
     height: calc(100vh - 50px);
     color: white;
+    padding-top: 10px;
 }
-.buttonSection{
+.cartCheck{
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+
 .checkoutBtn{
     background-color: #0090e3;
     text-align: center;
@@ -122,6 +130,9 @@
     background-color: #ed5565; height: 50px;
     text-align: center;
     line-height: 50px
+}
+.cartItem {
+    padding-top: 10px;
 }
 
 .footer{
