@@ -4,8 +4,9 @@
     <title>PyroDesk</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/myscripts.js"></script>
+
 
 </head>
 <body>
@@ -306,14 +307,14 @@
                     Zoek op artikelnummer of naam
                     <input class="form-control searchBar" type="text" placeholder="Search" aria-label="Search">
                     <div class="row productTableHeader">
-                        <div class="col-1 tableItem">#</div>
+                        <div class="col-1 tmableItem">#</div>
                         <div class="col-3 tableItem">Product Name</div>
                         <div class="col-2 tableItem">Free Stock</div>
                         <div class="col-2 tableItem">Price</div>
                         <div class="col-4 tableItem">Actions</div>
                     </div>
                     <div class="row productTable">
-                        <div class="col-1 tableItem">#</div>
+                        <div class="col-1 tableItem">ID</div>
                         <div class="col-3 tableItem">Product Name</div>
                         <div class="col-2 tableItem">Free Stock</div>
                         <div class="col-2 tableItem">Price</div>
@@ -400,5 +401,26 @@
 
 
 </div>
+
+<script type="text/javascript">
+    const xhr = new XMLHttpRequest();
+
+    xhr.onload = function(){
+        if (this.status === 200 ) {
+            try {
+                const resObj = JSON.parse(this.responseText);
+                console.log(resObj);
+            } catch (e) {
+                console.warn('There was in an error in the JSON. Could not parse');
+            }
+        } else {
+            console.warn('Did not receive 200 OK from response')
+        }
+    };
+
+    xhr.open('get','assets/products/sample_products.json');
+    xhr.send();
+
+</script>
 </body>
 </html>
