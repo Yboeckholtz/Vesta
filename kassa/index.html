@@ -29,7 +29,7 @@
             <!--toggle bar-->
             <div class="row">
                 <div class="col-12 toggleBar">
-                    <button class="btn toggleBtn" onclick="toggle()"> Toggle Button</button>
+                    <button id="toggleBtn" onclick="toggle()">Keyboard View</button>
                 </div>
             </div>
             <!--/toggle bar-->
@@ -303,31 +303,27 @@
             <!--Keyboard View -->
             <div class="row keyboardViewSection">
                 <div class="col-12 keyboardViewRow">
-                    Search and add products <br>
-                    Zoek op artikelnummer of naam
-                    <input class="form-control searchBar" type="text" placeholder="Search" aria-label="Search">
-                    <div class="row productTableHeader">
-                        <div class="col-1 tmableItem">#</div>
-                        <div class="col-3 tableItem">Product Name</div>
-                        <div class="col-2 tableItem">Free Stock</div>
-                        <div class="col-2 tableItem">Price</div>
-                        <div class="col-4 tableItem">Actions</div>
+                    <div class="col-12 searchBar">
+                        <input class="form-control searchBar" onkeyup="searchTable()" type="text" name="search" placeholder="search">
                     </div>
-                    <div class="row productTable">
-                        <div class="col-1 tableItem">ID</div>
-                        <div class="col-3 tableItem">Product Name</div>
-                        <div class="col-2 tableItem">Free Stock</div>
-                        <div class="col-2 tableItem">Price</div>
-                        <div class="col-4 tableItem">
-                            <button type="button" class="btn keyboardViewButton">Add Free</button>
-                            <button type="button" class="btn keyboardViewButton">Add Free</button>
-                        </div>
-                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Free Stock</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="productTable">
+                        <tr>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!--/Keyboard View -->
-
-
             <div class="footer">
                 <div class="container">
                     <p class="text-muted"> Developed by Vesta Group</p>
@@ -335,7 +331,6 @@
             </div>
         </div>
         <!--/shopping sector-->
-
         <div class="col-4 cartSection">
             <!--cart-->
             <div class="row">
@@ -395,32 +390,70 @@
             <!--/cart-->
         </div>
     </div>
-
-
 </div>
 
 
 </div>
+<div class="hidden comment">
+    <!--<script type="text/javascript">-->
+    <!--    const xhr = new XMLHttpRequest();-->
 
-<script type="text/javascript">
-    const xhr = new XMLHttpRequest();
+    <!--    xhr.onload = function(){-->
+    <!--        if (this.status === 200 ) {-->
+    <!--            try {-->
+    <!--                const resObj = JSON.parse(this.responseText);-->
+    <!--                console.log(resObj);-->
+    <!--            } catch (e) {-->
+    <!--                console.warn('There was in an error in the JSON. Could not parse');-->
+    <!--            }-->
+    <!--        } else {-->
+    <!--            console.warn('Did not receive 200 OK from response')-->
+    <!--        }-->
+    <!--    };-->
 
-    xhr.onload = function(){
-        if (this.status === 200 ) {
-            try {
-                const resObj = JSON.parse(this.responseText);
-                console.log(resObj);
-            } catch (e) {
-                console.warn('There was in an error in the JSON. Could not parse');
+    <!--    xhr.open('get','assets/products/sample_products.json');-->
+    <!--    xhr.send();-->
+    <!--</script>-->
+</div>
+<script>
+    $(document).ready(function(){
+        $.getJSON("assets/products/sample_products.json", function(data){
+            var product_data = '';
+            $.each(data, function (key, value){
+               product_data += '<tr>';
+               product_data += '<td>'+value.article_number+'</td>';
+               product_data += '<td>'+value.name+'</td>';
+               product_data += '<td>'+value.stock+'</td>';
+               product_data += '<td>'+'&euro;'+ value.price+'</td>';
+               product_data += '</tr>';
+            });
+            $('#productTable').append(product_data);
+        });
+
+        //Search function
+        function searchTable() {
+            var input, filter, found, table, tr, td, i, j;
+            input = document.getElementById("searchBar")[0];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("productTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tr[i].style.display = "";
+                    found = false;
+                } else {
+                    tr[i].style.display = "none";
+                }
             }
-        } else {
-            console.warn('Did not receive 200 OK from response')
         }
-    };
-
-    xhr.open('get','assets/products/sample_products.json');
-    xhr.send();
-
+    });
 </script>
+
 </body>
 </html>
