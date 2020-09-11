@@ -78,6 +78,7 @@
     height: 80%;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
     overflow: scroll;
+    overflow-x: hidden;
     max-height: 80vh;
 }
 .keyboardViewRow {
@@ -88,8 +89,9 @@
     padding: 2px;
     background-color: #f8ac59;
     color: white;
-    width: 48%;
-    height: 4vh;
+    width: 45%;
+    height: 5vh;
+    margin-right: 5px;
 }
 .col-12.searchBar{
     margin-bottom: 10px;

@@ -425,6 +425,11 @@
                product_data += '<td>'+value.name+'</td>';
                product_data += '<td>'+value.stock+'</td>';
                product_data += '<td>'+'&euro;'+ value.price+'</td>';
+               product_data += '<td id="keyboardViewButtonTr">'
+                   +"<button type=\"button\" class=\"btn keyboardViewButton\">Add Free</button>"
+                   +"<button type=\"button\" class=\"btn keyboardViewButton\">Add to Cart</button>"
+                   +'</td>';
+
                product_data += '</tr>';
             });
             $('#productTable').append(product_data);
