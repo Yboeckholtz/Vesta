@@ -66,6 +66,8 @@
     transition: 0.3s;
     height: 15vh;
     margin-bottom: 10px;
+    text-color: black;
+    color: black;
 }
 .productCard {
     padding-left: 5px;
@@ -85,7 +87,7 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-.keyboardViewButton{
+.addFree{
     padding: 2px;
     background-color: #f8ac59;
     color: white;
@@ -93,6 +95,15 @@
     height: 5vh;
     margin-right: 5px;
 }
+.addToCart {
+    padding: 2px;
+    background-color: #f8ac59;
+    color: white;
+    width: 45%;
+    height: 5vh;
+    margin-right: 5px;
+}
+
 .col-12.searchBar{
     margin-bottom: 10px;
     margin-top: 10px;
