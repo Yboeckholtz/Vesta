@@ -56,7 +56,7 @@
                     <br>
                     <div class="row">
                         <div class="col-3 productCard">
-                            <a href="#" class="productItem" data-name="rotje" data-price="50000" data-id="1">
+                            <a href="#" class="productItem" data-name="Celebration cracker 90 schots" data-price="50000" data-id="1">
                                 <div class="card">
                                     <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
                                     <div class="container">
@@ -123,10 +123,10 @@
         <div class="col-4 cartSection">
             <!--cart-->
             <div class="row">
-                <div class="col-6">Product</div>
+                <div class="col-5">Product</div>
                 <div class="col-1">Pcs.</div>
                 <div class="col-2">Price</div>
-                <div class="col-2">Total</div>
+                <div class="col-3">Total</div>
             </div>
 
             <hr style="background-color: white;">
@@ -138,24 +138,19 @@
 
             <div class="row cartCheck">
 
-                <div class="col-6">Numbers of products</div>
+                <div class="col-5">Numbers of products</div>
                 <div class="col-1">1</div>
                 <div class="col-2">Subtotal</div>
-                <div class="col-2">$189,99</div>
+                <div class="col-3 total">&euro; 0,00</div>
 
-                <div class="col-6"></div>
+                <div class="col-5"></div>
                 <div class="col-1"></div>
                 <div class="col-2">Total </div>
-                <div class="col-2 total">&euro; 0,00</div>
-                <div class="col-12 checkoutBtn">
-                    Checkout
-                </div>
-                <div class="col-6 addDiscountBtn">
-                    Add discount
-                </div>
-                <div class="col-6 cancelBtn">
-                    Cancel
-                </div>
+                <div class="col-3">&euro; 0,00</div>
+
+                <div class="col-12 checkoutBtn"> Checkout </div>
+                <div class="col-6 addDiscountBtn"> Add discount </div>
+                <div class="col-6 cancelBtn"> Cancel </div>
 
 
             </div>
@@ -200,18 +195,19 @@
             $.each(shoppingCart,function(index,value){
                 console.log(value);
                 var stotal = value.qty * value.price;
+                var totalCount =
                 total += stotal;
-                holderHTML = holderHTML + '<div class="col-6">' + value.name  + '</div>' +
+                holderHTML = holderHTML + '<div class="col-5">' + value.name  + '</div>' +
                                           '<div class="col-1">' + value.qty   + '</div>' +
                                           '<div class="col-2">' + formatMoney(value.price) + '</div>' +
-                                          '<div class="col-2">' + formatMoney(stotal) + '</div>'
+                                          '<div class="col-3">' + formatMoney(stotal) + '</div>'
             })
             $('.total').html(formatMoney(total));
             $('#output').html(holderHTML);
         }
 
         function formatMoney(n){
-            return "&euro; " + (n/100).toFixed(2);
+            return "&euro;" + (n/100).toFixed(2);
         }
     })
 </script>

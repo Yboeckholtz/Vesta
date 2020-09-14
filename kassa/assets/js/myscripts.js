@@ -53,13 +53,6 @@ function toggle() {
 // }
 // }
 
-        //add to cart function
-        $(document).ready(function (){
-            $(".productItem").click(function (e){
-                e.preventDefault();
-
-            })
-        })
 });
 
 //cart function
