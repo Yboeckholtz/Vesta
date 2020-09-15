@@ -12,38 +12,42 @@ function toggle() {
 }
 //retrieve products from json file
     $(document).ready(function(){
-    $.getJSON("assets/products/sample_products.json", function(data){
-        var product_data = '';
-        $.each(data, function (key, value){
-            product_data += '<tr>';
-            product_data += '<td>'+value.article_number+'</td>';
-            product_data += '<td>'+value.name+'</td>';
-            product_data += '<td>'+value.stock+'</td>';
-            product_data += '<td>'+'&euro;'+ value.price+'</td>';
-            product_data += '<td id="keyboardViewButtonTr">'
-                +"<button type=\"button\" class=\"btn addFree\">Add Free</button>"
-                +"<button type=\"button\" class=\"btn addToCart\">Add to Cart</button>"
-                +'</td>';
-            product_data += '</tr>';
-        });
-        $('#productTable').append(product_data);
-    });
 
-        $.getJSON("assets/products/sample_products.json", function(data){
-            var product_data = '';
-            $.each(data, function (key, value){
-                product_data += '<div class="col-3 productCard">';
-                product_data += '<a href="#" class="productItem">';
-                product_data += '<div class="card">';
-                product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 8vh;">';
-                product_data += '<div class="container">';
-                product_data += '<p>'+ value.name + '</p>';
-                product_data += '</div>';
-                product_data += '</div>';
-                product_data += '</a>'
-                product_data += '</div>';
+        //retrieve touchView products
+            $.getJSON("assets/products/sample_products.json", function(data){
+                var product_data = '';
+                $.each(data, function (key, value){
+                    product_data += '<div class="col-3 productCard">';
+                    product_data += '<a href="#" class="productItem">';
+                    product_data += '<div class="card">';
+                    product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 8vh;">';
+                    product_data += '<div class="container">';
+                    product_data += '<p>'+ value.name + '</p>';
+                    product_data += '</div>';
+                    product_data += '</div>';
+                    product_data += '</a>';
+                    product_data += '</div>';
+                });
+                $('#touchViewProducts').append(product_data);
+
+//retrieve keyboardView products
+            $.getJSON("assets/products/sample_products.json", function(data){
+                var product_data = '';
+                $.each(data, function (key, value){
+                    product_data += '<tr>';
+                    product_data += '<td>'+value.article_number+'</td>';
+                    product_data += '<td>'+value.name+'</td>';
+                    product_data += '<td>'+value.stock+'</td>';
+                    product_data += '<td>'+'&euro;'+ value.price+'</td>';
+                    product_data += '<td id="keyboardViewButtonTr">'
+                        +"<button type=\"button\" class=\"btn addFree\">Add Free</button>"
+                        +"<button type=\"button\" class=\"btn addToCart\">Add to Cart</button>"
+                        +'</td>';
+                    product_data += '</tr>';
+                });
+                $('#productTable').append(product_data);
             });
-            $('#touchViewProducts').append(product_data);
+
         });
 
         //   <div class="col-3 productCard">
