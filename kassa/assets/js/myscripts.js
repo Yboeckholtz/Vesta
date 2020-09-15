@@ -35,7 +35,7 @@ function toggle() {
                 product_data += '<div class="col-3 productCard">';
                 product_data += '<a href="#" class="productItem">';
                 product_data += '<div class="card">';
-                product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">';
+                product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 8vh;">';
                 product_data += '<div class="container">';
                 product_data += '<p>'+ value.name + '</p>';
                 product_data += '</div>';

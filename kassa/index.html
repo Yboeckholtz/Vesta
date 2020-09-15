@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-8 shoppingSection">
             <!--toggle bar-->
-            <div class="row"    >
+            <div class="row">
                 <div class="col-12 toggleBar">
                     <button id="toggleBtn" onclick="toggle()">Keyboard View</button>
                 </div>
@@ -41,13 +41,20 @@
                 <div class="col-3 categoriesSection"> Categories
                     <div class="categories">
                         <a class="nav-link" >All</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >Flowerbeds</a>
-                        <a class="nav-link" >All</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >cakes 500 gram</a>
-                        <a class="nav-link" >Fonteinen</a>
+                        <a class="nav-link" >Black-thunder</a>
+                        <a class="nav-link" >Blue-eagle-fireworks</a>
+                        <a class="nav-link" >Crystal-exclusive</a>
+                        <a class="nav-link" >Empire-fireworks</a>
+                        <a class="nav-link" >Grondbloemen</a>
+                        <a class="nav-link" >Happy Crackers</a>
+                        <a class="nav-link" >Knalerwten</a>
+                        <a class="nav-link" >Mad-dog</a>
+                        <a class="nav-link" >Knalerwten</a>
+                        <a class="nav-link" >Red-dragon</a>
+                        <a class="nav-link" >Vuurwerktoppers</a>
+                        <a class="nav-link" >Overige artikelen</a>
+
+
                     </div>
                 </div>
                 <div class="col-3"></div>
@@ -55,9 +62,6 @@
                 <div class="col-9 productItems" >
                     <br>
                     <div class="row" id="touchViewProducts">
-                        <div class="col-3 productCard">
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -66,7 +70,7 @@
             <div class="row keyboardViewSection">
                 <div class="col-12 keyboardViewRow">
                     <div class="col-12 searchBar">
-                        <input class="form-control searchBar" onkeyup="searchTable()" type="text" name="search" placeholder="search">
+                        <input class="form-control" id="search" type="text" name="search" placeholder="search">
                     </div>
                     <table class="table table-hover">
                         <thead>
@@ -131,80 +135,73 @@
 </div>
 
 </div>
-<script>
-    var shoppingCart = [];
-    $(document).ready(function() {
-        outputShoppingCart();
-        $(".productItem").click(function(e){
-            e.preventDefault();
-            var itemInfo = $(this.dataset)[0];
-            itemInfo.qty = 1;
-            var itemInCart = false;
-            $.each(shoppingCart,function(index,value){
-                // console.log(index + ' ' + value.id);
-                if(value.id == itemInfo.id){
-                    value.qty = parseInt(value.qty) + parseInt(itemInfo.qty);
-                    itemInCart = true;
-                }
-            })
-            if(!itemInCart){
-                shoppingCart.push(itemInfo);
-            }
-            sessionStorage["sc"]= JSON.stringify(shoppingCart)
+    <script>
+        var shoppingCart = [];
+        $(document).ready(function() {
+            //
             outputShoppingCart();
-            ///
-        })
-        function outputShoppingCart(){
-            if(sessionStorage["sc"] != null){
-                shoppingCart = JSON.parse(sessionStorage["sc"].toString());
-            }
-            var holderHTML = "";
-            var total = 0;
-            $.each(shoppingCart,function(index,value){
-                console.log(value);
-                var stotal = value.qty * value.price;
-                var totalCount =
-                total += stotal;
-                holderHTML = holderHTML + '<div class="col-5">' + value.name  + '</div>' +
-                                          '<div class="col-1">' + value.qty   + '</div>' +
-                                          '<div class="col-2">' + formatMoney(value.price) + '</div>' +
-                                          '<div class="col-3">' + formatMoney(stotal) + '</div>'
+            $(".productItem").click(function(e){
+                e.preventDefault();
+                var itemInfo = $(this.dataset)[0];
+                itemInfo.qty = 1;
+                var itemInCart = false;
+                $.each(shoppingCart,function(index,value){
+                    // console.log(index + ' ' + value.id);
+                    if(value.id == itemInfo.id){
+                        value.qty = parseInt(value.qty) + parseInt(itemInfo.qty);
+                        itemInCart = true;
+                    }
+                })
+                if(!itemInCart){
+                    shoppingCart.push(itemInfo);
+                }
+                sessionStorage["sc"]= JSON.stringify(shoppingCart)
+                outputShoppingCart();
+                ///
             })
-            $('.total').html(formatMoney(total));
-            $('#output').html(holderHTML);
-        }
 
-
-
-        function formatMoney(n){
-            return "&euro;" + (n/100).toFixed(2);
-        }
-    })
-
-
-</script>
-
-<div class="hidden comment">
-    <!--<script type="text/javascript">-->
-    <!--    const xhr = new XMLHttpRequest();-->
-
-    <!--    xhr.onload = function(){-->
-    <!--        if (this.status === 200 ) {-->
-    <!--            try {-->
-    <!--                const resObj = JSON.parse(this.responseText);-->
-    <!--                console.log(resObj);-->
-    <!--            } catch (e) {-->
-    <!--                console.warn('There was in an error in the JSON. Could not parse');-->
-    <!--            }-->
-    <!--        } else {-->
-    <!--            console.warn('Did not receive 200 OK from response')-->
-    <!--        }-->
-    <!--    };-->
-
-    <!--    xhr.open('get','assets/products/sample_products.json');-->
-    <!--    xhr.send();-->
-    <!--</script>-->
-</div>
-
+            //add to shopping cart function
+            function outputShoppingCart(){
+                if(sessionStorage["sc"] != null){
+                    shoppingCart = JSON.parse(sessionStorage["sc"].toString());
+                }
+                var holderHTML = "";
+                var total = 0;
+                $.each(shoppingCart,function(index,value){
+                    // console.log(value);
+                    var stotal = value.qty * value.price;
+                    var totalCount =
+                    total += stotal;
+                    holderHTML = holderHTML + '<div class="col-5">' + value.name  + '</div>' +
+                                              '<div class="col-1">' + value.qty   + '</div>' +
+                                              '<div class="col-2">' + formatMoney(value.price) + '</div>' +
+                                              '<div class="col-3">' + formatMoney(stotal) + '</div>'
+                })
+                $('.total').html(formatMoney(total));
+                $('#output').html(holderHTML);
+            }
+    //search function
+            $('.searchBar').keyup(function(){
+                $('#productTable').html('');
+                var searchField = $('.searchBar').val();
+                var expression = new RegExp(searchField, "i");
+                $.getJSON('sample_products.json', function (data){
+                    $.each(data, function (key, value){
+                        if(value.name.search(expression) != -1 || value.location.search(expression) != -1 )
+                        {
+                            $('#productTable').append(
+                                '<div class="col-5">' + value.name  + '</div>' +
+                                '<div class="col-1">' + value.qty   + '</div>' +
+                                '<div class="col-2">' + formatMoney(value.price) + '</div>' +
+                                '<div class="col-3">' + formatMoney(stotal) + '</div>');
+                        }
+                    });
+                })
+    });
+            function formatMoney(n){
+                return "&euro;" + (n/100).toFixed(2);
+            }
+        })
+    </script>
 </body>
 </html>

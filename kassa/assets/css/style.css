@@ -8,7 +8,6 @@
 }
 
 .form {
-
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
@@ -73,7 +72,7 @@
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    height: 15vh;
+    height: 17vh;
     margin-bottom: 10px;
     text-color: black;
     color: black;
