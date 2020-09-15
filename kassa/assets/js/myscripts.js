@@ -9,15 +9,13 @@ function toggle() {
         } else {
             x.innerHTML = "Keyboard View";
         }
-
 }
-
 //retrieve products from json file
     $(document).ready(function(){
     $.getJSON("assets/products/sample_products.json", function(data){
         var product_data = '';
         $.each(data, function (key, value){
-            product_data += '<tr class="productItem">';
+            product_data += '<tr>';
             product_data += '<td>'+value.article_number+'</td>';
             product_data += '<td>'+value.name+'</td>';
             product_data += '<td>'+value.stock+'</td>';
@@ -30,6 +28,35 @@ function toggle() {
         });
         $('#productTable').append(product_data);
     });
+
+        $.getJSON("assets/products/sample_products.json", function(data){
+            var product_data = '';
+            $.each(data, function (key, value){
+                product_data += '<div class="col-3 productCard">';
+                product_data += '<a href="#" class="productItem">';
+                product_data += '<div class="card">';
+                product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">';
+                product_data += '<div class="container">';
+                product_data += '<p>'+ value.name + '</p>';
+                product_data += '</div>';
+                product_data += '</div>';
+                product_data += '</a>'
+                product_data += '</div>';
+            });
+            $('#touchViewProducts').append(product_data);
+        });
+
+        //   <div class="col-3 productCard">
+//         <a href="#" class="productItem" data-name="Celebration cracker 90 schots" data-price="50000" data-id="1">
+//             <div class="card">
+//                 <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
+//                     <div class="container">
+//                         <p> Rotje</p>
+//                     </div>
+//             </div>
+//         </a>
+//     </div>
+
     //Search function
 //     function searchTable() {
 //     var input, filter, found, table, tr, td, i, j;
@@ -52,11 +79,6 @@ function toggle() {
 // }
 // }
 // }
-
 });
 
-//cart function
-function localStorageTest(){
-    localStorage.setItem('cartNumbers');
-    console.log("test")
-}
+

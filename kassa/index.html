@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-8 shoppingSection">
             <!--toggle bar-->
-            <div class="row">
+            <div class="row"    >
                 <div class="col-12 toggleBar">
                     <button id="toggleBtn" onclick="toggle()">Keyboard View</button>
                 </div>
@@ -54,36 +54,9 @@
                 <!-- categories menu -->
                 <div class="col-9 productItems" >
                     <br>
-                    <div class="row">
+                    <div class="row" id="touchViewProducts">
                         <div class="col-3 productCard">
-                            <a href="#" class="productItem" data-name="Celebration cracker 90 schots" data-price="50000" data-id="1">
-                                <div class="card">
-                                    <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                    <div class="container">
-                                        <p> Rotje</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3 productCard">
-                            <a href="#" class="productItem" data-name="Aap" data-price="6900" data-id="2">
-                                <div class="card">
-                                    <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                    <div class="container">
-                                        <p> Aap</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3 productCard">
-                            <a href="#" class="productItem" data-name="Fontein" data-price="3000" data-id="3">
-                                <div class="card">
-                                    <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                    <div class="container">
-                                        <p> Fontein</p>
-                                    </div>
-                                </div>
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -151,15 +124,11 @@
                 <div class="col-12 checkoutBtn"> Checkout </div>
                 <div class="col-6 addDiscountBtn"> Add discount </div>
                 <div class="col-6 cancelBtn"> Cancel </div>
-
-
             </div>
-
             <!--/cart-->
         </div>
     </div>
 </div>
-
 
 </div>
 <script>
@@ -185,7 +154,6 @@
             outputShoppingCart();
             ///
         })
-
         function outputShoppingCart(){
             if(sessionStorage["sc"] != null){
                 shoppingCart = JSON.parse(sessionStorage["sc"].toString());
@@ -206,10 +174,14 @@
             $('#output').html(holderHTML);
         }
 
+
+
         function formatMoney(n){
             return "&euro;" + (n/100).toFixed(2);
         }
     })
+
+
 </script>
 
 <div class="hidden comment">
