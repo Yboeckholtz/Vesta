@@ -3,11 +3,14 @@
 <head>
     <title>PyroDesk</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/myscripts.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 
-
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -53,15 +56,15 @@
                         <a class="nav-link" >Red-dragon</a>
                         <a class="nav-link" >Vuurwerktoppers</a>
                         <a class="nav-link" >Overige artikelen</a>
-
-
                     </div>
                 </div>
+
                 <div class="col-3"></div>
                 <!-- categories menu -->
                 <div class="col-9 productItems" >
                     <br>
                     <div class="row" id="touchViewProducts">
+
                     </div>
                 </div>
             </div>
@@ -69,23 +72,16 @@
             <!--Keyboard View -->
             <div class="row keyboardViewSection">
                 <div class="col-12 keyboardViewRow">
-                    <div class="col-12 searchBar">
-                        <input class="form-control" id="search" type="text" name="search" placeholder="search">
-                    </div>
-                    <table class="table table-hover">
+                    <table id="data-table" class="table table-bordered" style="width: 100%;">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Free Stock</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Actions</th>
+                            <th> # </th>
+                            <th> Product name </th>
+                            <th> Free Stock </th>
+                            <th> Price </th>
+                            <th> Action </th>
                         </tr>
                         </thead>
-                        <tbody id="productTable">
-                        <tr>
-                        </tr>
-                        </tbody>
                     </table>
                 </div>
             </div>
@@ -105,15 +101,10 @@
                 <div class="col-2">Price</div>
                 <div class="col-3">Total</div>
             </div>
-
             <hr style="background-color: white;">
 
-            <div class="row" id="output">
-
-            </div>
-
             <div class="row cartCheck">
-                <div class="col-5">Numbers of products</div>
+                <div class="col-5">Number of products</div>
                 <div class="col-1">1</div>
                 <div class="col-2">Subtotal</div>
                 <div class="col-3 total">&euro; 0,00</div>
@@ -134,79 +125,94 @@
 
 </div>
     <script>
-        var shoppingCart = [];
-        $(document).ready(function() {
-            //
-            outputShoppingCart();
-            $(".productItem").click(function(e){
-                e.preventDefault();
-                var itemInfo = $(this.dataset)[0];
-                itemInfo.qty = 1;
-                var itemInCart = false;
-                $.each(shoppingCart,function(index,value){
-                    // console.log(index + ' ' + value.id);
-                    if(value.id == itemInfo.id){
-                        value.qty = parseInt(value.qty) + parseInt(itemInfo.qty);
-                        itemInCart = true;
-                    }
-                })
-                if(!itemInCart){
-                    shoppingCart.push(itemInfo);
-                }
-                sessionStorage["sc"]= JSON.stringify(shoppingCart)
-                outputShoppingCart();
-                ///
-            })
+
+        $.getJSON("assets/products/sample_products.json", function(data) {
+            var product_data = '';
+            $.each(data, function (key, value) {
+                product_data += '<div class="col-3 productCard">';
+                product_data += '<a href="#" class="productItem">';
+                product_data += '<div class="card">';
+                product_data += '<img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 8vh;">';
+                product_data += '<div class="container">';
+                product_data += '<p>' + value.name + '</p>';
+                product_data += '</div>';
+                product_data += '</div>';
+                product_data += '</a>';
+                product_data += '</div>';
+            });
+            $('#touchViewProducts').append(product_data);})
+
+        // var shoppingCart = [];
+        // $(document).ready(function() {
+        //     //
+        //     outputShoppingCart();
+        //     $(".productItem").click(function(e){
+        //         e.preventDefault();
+        //         var itemInfo = $(this.dataset)[0];
+        //         itemInfo.qty = 1;
+        //         var itemInCart = false;
+        //         $.each(shoppingCart,function(index,value){
+        //             // console.log(index + ' ' + value.id);
+        //             if(value.id == itemInfo.id){
+        //                 value.qty = parseInt(value.qty) + parseInt(itemInfo.qty);
+        //                 itemInCart = true;
+        //             }
+        //         })
+        //         if(!itemInCart){
+        //             shoppingCart.push(itemInfo);
+        //         }
+        //         sessionStorage["sc"]= JSON.stringify(shoppingCart)
+        //         outputShoppingCart();
+        //         ///
+        //     })
             //add to shopping cart function
-            function outputShoppingCart(){
-                if(sessionStorage["sc"] != null){
-                    shoppingCart = JSON.parse(sessionStorage["sc"].toString());
-                }
-                var holderHTML = "";
-                var total = 0;
-                $.each(shoppingCart,function(index,value){
-                    // console.log(value);
-                    var stotal = value.qty * value.price;
-                    var totalCount =
-                    total += stotal;
-                    holderHTML = holderHTML + '<div class="col-5">' + value.name  + '</div>' +
-                                              '<div class="col-1">' + value.qty   + '</div>' +
-                                              '<div class="col-2">' + formatMoney(value.price) + '</div>' +
-                                              '<div class="col-3">' + formatMoney(stotal) + '</div>'
-                })
-                $('.total').html(formatMoney(total));
-                $('#output').html(holderHTML);
-            }
+            // function outputShoppingCart(){
+            //     if(sessionStorage["sc"] != null){
+            //         shoppingCart = JSON.parse(sessionStorage["sc"].toString());
+            //     }
+            //     var holderHTML = "";
+            //     var total = 0;
+            //     $.each(shoppingCart,function(index,value){
+            //         // console.log(value);
+            //         var stotal = value.qty * value.price;
+            //         var totalCount =
+            //         total += stotal;
+            //         holderHTML = holderHTML + '<div class="col-5">' + value.name  + '</div>' +
+            //                                   '<div class="col-1">' + value.qty   + '</div>' +
+            //                                   '<div class="col-2">' + formatMoney(value.price) + '</div>' +
+            //                                   '<div class="col-3">' + formatMoney(stotal) + '</div>'
+            //     })
+            //     $('.total').html(formatMoney(total));
+            //     $('#output').html(holderHTML);
+            // }
     //search function
             //search function
-            $('#search').keyup(function(){
-                $('#productTable').html('');
-                var searchField = $('#search').val();
-                var expression = new RegExp(searchField, "i");
-                $.getJSON('assets/products/sample_products.json', function (data){
-                    $.each(data, function (key, value){
-                        if(value.name.search(expression) !== -1 || value.article_number.search(expression) !== -1)
-                        {
-                            $('#productTable').append('<tr>'+
-                             '<td>'+value.article_number+'</td>'+
-                             '<td>'+value.name+'</td>'+
-                             '<td>'+value.stock+'</td>'+
-                             '<td>'+'&euro;'+ value.price+'</td>'+
-                             '<td id="keyboardViewButtonTr">'+
-                                '<button type=\"button\" class=\"btn addFree\">Add Free</button>'+
-                                '<button type=\"button\" class=\"btn addToCart\">Add to Cart</button>'+
-                                '</td>'+
-                             '</tr>');
-                        }
-
-                    });
-                });
-            });
-
-            function formatMoney(n){
-                return "&euro;" + (n/100).toFixed(2);
-            }
-        })
+            // $('#search').keyup(function(){
+            //     $('#productTable').html('');
+            //     var searchField = $('#search').val();
+            //     var expression = new RegExp(searchField, "i");
+            //     $.getJSON('assets/products/sample_products.json', function (data){
+            //         $.each(data, function (key, value){
+            //             if(value.name.search(expression) !== -1 || value.article_number.search(expression) !== -1)
+            //             {
+            //                 $('#productTable').append('<tr>'+
+            //                  '<td>'+value.article_number+'</td>'+
+            //                  '<td>'+value.name+'</td>'+
+            //                  '<td>'+value.stock+'</td>'+
+            //                  '<td>'+'&euro;'+ value.price+'</td>'+
+            //                  '<td id="keyboardViewButtonTr">'+
+            //                     '<button type=\"button\" class=\"btn addFree\">Add Free</button>'+
+            //                     '<button type=\"button\" class=\"btn addToCart\">Add to Cart</button>'+
+            //                     '</td>'+
+            //                  '</tr>');
+            //             }
+            //         });
+            //     });
+            // });
+        //     function formatMoney(n){
+        //         return "&euro;" + (n/100).toFixed(2);
+        //     }
+        // })
     </script>
 </body>
 </html>
