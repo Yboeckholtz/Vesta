@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/myscripts.js"></script>
+    <script src="/assets/products/sample_products.json"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 
@@ -49,13 +50,6 @@
                         <a class="nav-link" >Crystal-exclusive</a>
                         <a class="nav-link" >Empire-fireworks</a>
                         <a class="nav-link" >Grondbloemen</a>
-                        <a class="nav-link" >Happy Crackers</a>
-                        <a class="nav-link" >Knalerwten</a>
-                        <a class="nav-link" >Mad-dog</a>
-                        <a class="nav-link" >Knalerwten</a>
-                        <a class="nav-link" >Red-dragon</a>
-                        <a class="nav-link" >Vuurwerktoppers</a>
-                        <a class="nav-link" >Overige artikelen</a>
                     </div>
                 </div>
 
@@ -73,7 +67,7 @@
             <div class="row keyboardViewSection">
                 <div class="col-12 keyboardViewRow">
                     <table id="data-table" class="table table-bordered" style="width: 100%;">
-                        <thead>
+                        <thead id="tableHead">
                         <tr>
                             <th> # </th>
                             <th> Product name </th>
@@ -125,10 +119,10 @@
 
 </div>
     <script>
-
         $.getJSON("assets/products/sample_products.json", function(data) {
             var product_data = '';
-            $.each(data, function (key, value) {
+            $.each(data.data, function (key, value) {
+                console.log(data);
                 product_data += '<div class="col-3 productCard">';
                 product_data += '<a href="#" class="productItem">';
                 product_data += '<div class="card">';
@@ -141,7 +135,6 @@
                 product_data += '</div>';
             });
             $('#touchViewProducts').append(product_data);})
-
         // var shoppingCart = [];
         // $(document).ready(function() {
         //     //
@@ -213,6 +206,7 @@
         //         return "&euro;" + (n/100).toFixed(2);
         //     }
         // })
+
     </script>
 </body>
 </html>

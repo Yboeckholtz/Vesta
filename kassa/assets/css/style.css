@@ -103,6 +103,11 @@
     height: 5vh;
     margin-right: 5px;
 }
+
+#tableHead {
+    position: sticky;
+}
+
 .addToCart {
     padding: 2px;
     background-color: #f8ac59;
