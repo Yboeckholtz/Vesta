@@ -13,6 +13,18 @@ function toggle() {
 //retrieve products from json file
     $(document).ready(function() {
 
+
+        //categorie filter
+        $('.nav-link').click(function(){
+            var category = $(this).attr('id');
+
+            if(category == 'all'){
+                $('product_item').addClass('hide');
+                setTimeout(function(){
+                    $('.product')
+                }, 300);
+            }
+        })
         //retrieve touchView products
 //retrieve keyboardView products
         $('#data-table').DataTable({
@@ -23,11 +35,16 @@ function toggle() {
                 {"data": "name"},
                 {"data": "stock"},
                 {"data": "price"},
-                {"defaultContent": "<button class='addToCart'>Add to Cart</button>"}
+                {"defaultContent": "<button class='addToCart'>Add to Cart</button><button class='addFree'>Add Free</button>"}
             ]
         });
 
-    })
+        $(".productItem").click(function(e){
+            e.preventDefault();
+            console.log("item clicked")
+        })
+
+    });
     //Search function
 //     function searchTable() {
 //     var input, filter, found, table, tr, td, i, j;

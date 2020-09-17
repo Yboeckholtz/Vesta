@@ -57,17 +57,22 @@
 .categoriesSection {
     padding-left: 0px;
     padding-right: 10px;
-    position: fixed;
     width: 14%;
+
 }
 .categories{
     padding-left: 0px;
     background-color: #e6e6e6;
+    position: fixed;
 }
+.categories a{
+    color: black;
+}
+
 .productItems {
     padding-left: 5px;
-
 }
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
@@ -80,7 +85,6 @@
 .productCard {
     padding-left: 5px;
     padding-right: 5px;
-
 }
 
 .keyboardViewSection{
@@ -95,14 +99,6 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-.addFree{
-    padding: 2px;
-    background-color: #f8ac59;
-    color: white;
-    width: 45%;
-    height: 5vh;
-    margin-right: 5px;
-}
 
 #tableHead {
     position: sticky;
@@ -112,11 +108,22 @@
     padding: 2px;
     background-color: #f8ac59;
     color: white;
-    width: 100%;
+    width: 42%;
     height: 5vh;
     margin-right: 5px;
     border: none;
 }
+
+.addFree{
+    padding: 2px;
+    background-color: #f8ac59;
+    color: white;
+    width: 42%;
+    height: 5vh;
+    margin-right: 5px;
+    border: none;
+}
+
 .form-control form-control-sm {
     width: 100%;
 }
