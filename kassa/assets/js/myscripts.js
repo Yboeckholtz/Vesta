@@ -13,18 +13,8 @@ function toggle() {
 //retrieve products from json file
     $(document).ready(function() {
 
-
         //categorie filter
-        $('.nav-link').click(function(){
-            var category = $(this).attr('id');
-
-            if(category == 'all'){
-                $('product_item').addClass('hide');
-                setTimeout(function(){
-                    $('.product')
-                }, 300);
-            }
-        })
+        $('[data-selected]')
         //retrieve touchView products
 //retrieve keyboardView products
         $('#data-table').DataTable({
@@ -39,10 +29,7 @@ function toggle() {
             ]
         });
 
-        $(".productItem").click(function(e){
-            e.preventDefault();
-            console.log("item clicked")
-        })
+
 
     });
     //Search function
