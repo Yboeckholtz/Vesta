@@ -43,16 +43,14 @@
                     <div class="categories">
                         <p style="background-color: white; margin-bottom: 0px" > Categories </p>
                         <a class="nav-link" id="all" href="#">All</a>
-                        <a class="nav-link" id="black-thunder" href="#">Black-thunder</a>
-                        <a class="nav-link" id="blue-eagle-fireworks" href="#">Blue-eagle-fireworks</a>
-                        <a class="nav-link" id="crystal-exclusive" href="#">Crystal-exclusive</a>
-                        <a class="nav-link" id="empire-fireworks" href="#">Empire-fireworks</a>
-                        <a class="nav-link" id="grondbloemen" href="#">Grondbloemen</a>
+                        <a class="nav-link" id="knalvuurwerk" href="#">Knalvuurwerk</a>
+                        <a class="nav-link" id="rotjes" href="#">Rotjes</a>
+                        <a class="nav-link" id="siervuurwerk" href="#">Siervuurwerk</a>
                     </div>
                 </div>
 
                 <!-- categories menu -->
-<!--                <p style="background-color: white; margin-bottom: 0px" > Products </p>-->
+                <!--                <p style="background-color: white; margin-bottom: 0px" > Products </p>-->
                 <div class="col-9 productItems" >
                     <br>
                     <div class="row" id="touchViewProducts">
@@ -94,55 +92,85 @@
                 <div class="col-3">Total</div>
             </div>
             <hr style="background-color: white;">
+            <div id="output" class="row"></div>
+            <div class="row" id="shopcartProducts">
 
-            <div class="row cartCheck">
-                <div class="col-5">Number of products</div>
-                <div class="col-1">1</div>
-                <div class="col-2">Subtotal</div>
-                <div class="col-3 total">&euro; 0,00</div>
-
-                <div class="col-5"></div>
-                <div class="col-1"></div>
-                <div class="col-2">Total </div>
-                <div class="col-3">&euro; 0,00</div>
-
-                <div class="col-12 checkoutBtn"> Checkout </div>
-                <div class="col-6 addDiscountBtn"> Add discount </div>
-                <div class="col-6 cancelBtn"> Cancel </div>
             </div>
+
+
+<!--            <div class="row cartCheck">-->
+<!--                <div class="col-5">Number of products</div>-->
+<!--                <div class="col-1">1</div>-->
+<!--                <div class="col-2">Subtotal</div>-->
+<!--                <div class="col-3 total">&euro; 0,00</div>-->
+
+<!--                <div class="col-5"></div>-->
+<!--                <div class="col-1"></div>-->
+<!--                <div class="col-2">Total </div>-->
+<!--                <div class="col-3">&euro; 0,00</div>-->
+
+                <!--buttons -->
+<!--            </div>-->
             <!--/cart-->
         </div>
     </div>
 </div>
-
 </div>
-    <script>
-        $(function(){
-            $.getJSON("assets/products/sample_products.json", function(response) {
-                $.each(response.data, function (i, el) {
-                    let card = $($('#productCard-template').html());
-                    card.find('.container > p').html(el.article_number + ' - ' + el.name);
-                    card.find('.productItem').attr('data-price', el.price)
-                        .attr('data-article-number', el.article_number)
-                        .attr('data-id', el.id)
-                        .attr('data-name', el.name);
-                    $('#touchViewProducts').append(card);
-                });
+<script>
+    $(function(){
+        $.getJSON("assets/products/sample_products.json", function(response) {
+            $.each(response.data, function (i, el) {
+                let card = $($('#productCard-template').html());
+                card.find('.container > p').html( el.name + '<br> &euro;' +  el.price );
+                card.find('.productItem').attr('data-price', el.price)
+                    .attr('data-article-number', el.article_number)
+                    .attr('data-id', el.id)
+                    .attr('data-name', el.name)
+                    .attr('data-categories', el.categories);
+                $('#touchViewProducts').append(card);
             });
         });
-    </script>
+    });
 
-    <script type="text/template" id="productCard-template">
-        <div class="col-3 productCard">
-            <a href="#" class="productItem">
-                <div class="card">
-                    <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width: 100%; height: 8vh;">
-                    <div class="container">
-                        <p>aap</p>
-                    </div>
+
+
+    //filter function
+    $(".nav-link").click(function() {
+        var category = $(this).attr('id');
+        if (category != "all") {
+            $(".productCard").hide();
+            $(".productCard").each(function() {
+                if ($(this).find(".productItem").attr('categories') == category) {
+                    $(this).show() //show that div
+                }
+            })
+        } else {
+            $(".productCard").show();
+        }
+    })
+
+</script>
+<script type="text/template" id="productCard-template">
+    <div class="col-3 productCard">
+        <a href="#" class="productItem">
+            <div class="card">
+                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width: 100%; height: 8vh;">
+                <div class="container">
+                    <p>test</p>
                 </div>
-            </a>
-        </div>
-    </script>
+            </div>
+        </a>
+    </div>
+</script>
+
+<script type="text/template" id="shopcartRow-template">
+    <div class="row">
+        <div class="col-5" id="valueName"> <p> </p> </div>
+        <div class="col-1" id="valueQty"> <p> </p> </div>
+        <div class="col-2" id="valuePrice"> <p> </p> </div>
+        <div class="col-3" id="valueTotal"> <p> </p>  </div>
+    </div>
+</script>
+
 </body>
 </html>

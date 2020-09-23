@@ -10,8 +10,53 @@ function toggle() {
             x.innerHTML = "Keyboard View";
         }
 }
-//retrieve products from json file
+
+var shopcart = [];
+
     $(document).ready(function() {
+        outputCart();
+//add to cart functionality
+        $(document).on('click', '.productItem', function(){
+            var productInfo = $(this.dataset)[0];
+            productInfo.qty = 1;
+            var productInCart = false;
+
+            $.each(shopcart, function(index, value){
+                if(value.id == productInfo.id){
+                    value.qty=parseInt(value.qty) + parseInt(productInfo.qty);
+                    productInCart = true;
+                }
+            })
+
+            if(!productInCart){
+                shopcart.push(productInfo);
+            }
+            sessionStorage["sc"]=JSON.stringify(shopcart);
+            outputCart();
+        });
+
+//output cart
+        function outputCart(){
+            if(sessionStorage["sc"] != null){
+                shopcart = JSON.parse(sessionStorage["sc"].toString());
+                console.log(sessionStorage["sc"]);
+            }
+            var holderHTML = "";
+            var total = 0;
+
+            $.each(shopcart, function(index, value){
+                console.log(value);
+                var subtotal = value.qty * value.price;
+                total = (value.price * value.qty);
+                holderHTML += '<div class="col-5">' + value.name + '</div>' +
+                              '<div class="col-1">' + value.qty + '</div>' +
+                              '<div class="col-2">' + '&euro;' + value.price + '</div>' +
+                              '<div class="col-3">' + '&euro;' + subtotal.toFixed(2) + '</div>'
+            })
+                // holderHTML += '<div>'+ total +'</div>';
+                $('#output').html(holderHTML);
+        }
+
 
         //categorie filter
         $('[data-selected]')
@@ -29,31 +74,10 @@ function toggle() {
             ]
         });
 
+})
 
 
-    });
-    //Search function
-//     function searchTable() {
-//     var input, filter, found, table, tr, td, i, j;
-//     input = document.getElementById("searchBar")[0];
-//     filter = input.value.toUpperCase();
-//     table = document.getElementById("productTable");
-//     tr = table.getElementsByTagName("tr");
-//     for (i = 0; i < tr.length; i++) {
-//     td = tr[i].getElementsByTagName("td");
-//     for (j = 0; j < td.length; j++) {
-//     if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-//     found = true;
-// }
-// }
-//     if (found) {
-//     tr[i].style.display = "";
-//     found = false;
-// } else {
-//     tr[i].style.display = "none";
-// }
-// }
-// }
+
 
 
 

@@ -1,5 +1,6 @@
 * {
     font-size: 12px;
+    touch-action: manipulation;
 }
 .navbar {
     background-color: #0090e3;

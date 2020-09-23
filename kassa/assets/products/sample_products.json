@@ -4855,7 +4855,11 @@
       "amount_for_one":0,
       "is_rocket":false,
       "dealer_price":"19.99",
-      "sold_out":false
+      "sold_out":false,
+      "categories": [
+        "knalvuurwerk",
+        "rotjes"
+      ]
     }
   ]
 }
