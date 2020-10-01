@@ -1,804 +1,803 @@
 {
-  "data": [
-      {
-        "id": 7562,
-        "article_number": 2566,
-        "name": "Rajae",
-        "price": 58,
-        "categorie": "siervuurwerk",
-        "stock": 599
-      },
-      {
-        "id": 7563,
-        "article_number": 7013,
-        "name": "Cameron",
-        "price": 78,
-        "categorie": "rotjes",
-        "stock": 431
-      },
-      {
-        "id": 7564,
-        "article_number": 1080,
-        "name": "Luping",
-        "price": 25,
-        "categorie": "siervuurwerk",
-        "stock": 289
-      },
-      {
-        "id": 7565,
-        "article_number": 5244,
-        "name": "Irma",
-        "price": 10,
-        "categorie": "rotjes",
-        "stock": 443
-      },
-      {
-        "id": 7566,
-        "article_number": 6614,
-        "name": "Oscar",
-        "price": 89,
-        "categorie": "knalvuurwerk",
-        "stock": 223
-      },
-      {
-        "id": 7567,
-        "article_number": 7829,
-        "name": "Cathryn",
-        "price": 45,
-        "categorie": "knalvuurwerk",
-        "stock": 412
-      },
-      {
-        "id": 7568,
-        "article_number": 8740,
-        "name": "Larina",
-        "price": 51,
-        "categorie": "siervuurwerk",
-        "stock": 312
-      },
-      {
-        "id": 7569,
-        "article_number": 2220,
-        "name": "Harrietta",
-        "price": 41,
-        "categorie": "rotjes",
-        "stock": 709
-      },
-      {
-        "id": 7570,
-        "article_number": 2670,
-        "name": "Clint",
-        "price": 48,
-        "categorie": "knalvuurwerk",
-        "stock": 521
-      },
-      {
-        "id": 7571,
-        "article_number": 5470,
-        "name": "Virgis",
-        "price": 23,
-        "categorie": "knalvuurwerk",
-        "stock": 379
-      },
-      {
-        "id": 7572,
-        "article_number": 7116,
-        "name": "Tomi",
-        "price": 54,
-        "categorie": "siervuurwerk",
-        "stock": 357
-      },
-      {
-        "id": 7573,
-        "article_number": 2080,
-        "name": "Thresa",
-        "price": 23,
-        "categorie": "siervuurwerk",
-        "stock": 305
-      },
-      {
-        "id": 7574,
-        "article_number": 5016,
-        "name": "Martin",
-        "price": 63,
-        "categorie": "siervuurwerk",
-        "stock": 518
-      },
-      {
-        "id": 7575,
-        "article_number": 1492,
-        "name": "Misty",
-        "price": 61,
-        "categorie": "rotjes",
-        "stock": 525
-      },
-      {
-        "id": 7576,
-        "article_number": 1767,
-        "name": "Gale",
-        "price": 38,
-        "categorie": "knalvuurwerk",
-        "stock": 784
-      },
-      {
-        "id": 7577,
-        "article_number": 8557,
-        "name": "Lakshmi",
-        "price": 94,
-        "categorie": "siervuurwerk",
-        "stock": 457
-      },
-      {
-        "id": 7578,
-        "article_number": 8800,
-        "name": "Angelo",
-        "price": 99,
-        "categorie": "siervuurwerk",
-        "stock": 609
-      },
-      {
-        "id": 7579,
-        "article_number": 3702,
-        "name": "Peter",
-        "price": 12,
-        "categorie": "siervuurwerk",
-        "stock": 795
-      },
-      {
-        "id": 7580,
-        "article_number": 8412,
-        "name": "Emir",
-        "price": 12,
-        "categorie": "siervuurwerk",
-        "stock": 865
-      },
-      {
-        "id": 7581,
-        "article_number": 3011,
-        "name": "Biswajit",
-        "price": 55,
-        "categorie": "knalvuurwerk",
-        "stock": 899
-      },
-      {
-        "id": 7582,
-        "article_number": 5113,
-        "name": "John",
-        "price": 65,
-        "categorie": "rotjes",
-        "stock": 651
-      },
-      {
-        "id": 7583,
-        "article_number": 7833,
-        "name": "Dorota",
-        "price": 63,
-        "categorie": "siervuurwerk",
-        "stock": 934
-      },
-      {
-        "id": 7584,
-        "article_number": 4166,
-        "name": "Audrey",
-        "price": 74,
-        "categorie": "rotjes",
-        "stock": 835
-      },
-      {
-        "id": 7585,
-        "article_number": 4495,
-        "name": "Francis",
-        "price": 26,
-        "categorie": "knalvuurwerk",
-        "stock": 957
-      },
-      {
-        "id": 7586,
-        "article_number": 6785,
-        "name": "Wattis",
-        "price": 79,
-        "categorie": "rotjes",
-        "stock": 253
-      },
-      {
-        "id": 7587,
-        "article_number": 1745,
-        "name": "Bern",
-        "price": 80,
-        "categorie": "rotjes",
-        "stock": 808
-      },
-      {
-        "id": 7588,
-        "article_number": 1736,
-        "name": "Leon",
-        "price": 44,
-        "categorie": "rotjes",
-        "stock": 123
-      },
-      {
-        "id": 7589,
-        "article_number": 5849,
-        "name": "Verlene",
-        "price": 68,
-        "categorie": "siervuurwerk",
-        "stock": 224
-      },
-      {
-        "id": 7590,
-        "article_number": 7844,
-        "name": "Nichelle",
-        "price": 18,
-        "categorie": "rotjes",
-        "stock": 319
-      },
-      {
-        "id": 7591,
-        "article_number": 8769,
-        "name": "Beth",
-        "price": 91,
-        "categorie": "rotjes",
-        "stock": 369
-      },
-      {
-        "id": 7592,
-        "article_number": 5468,
-        "name": "Corazon",
-        "price": 23,
-        "categorie": "knalvuurwerk",
-        "stock": 123
-      },
-      {
-        "id": 7593,
-        "article_number": 3683,
-        "name": "Ravi",
-        "price": 82,
-        "categorie": "siervuurwerk",
-        "stock": 226
-      },
-      {
-        "id": 7594,
-        "article_number": 6841,
-        "name": "Hector",
-        "price": 49,
-        "categorie": "siervuurwerk",
-        "stock": 151
-      },
-      {
-        "id": 7595,
-        "article_number": 8617,
-        "name": "Alina",
-        "price": 20,
-        "categorie": "rotjes",
-        "stock": 832
-      },
-      {
-        "id": 7596,
-        "article_number": 4528,
-        "name": "Harpal",
-        "price": 67,
-        "categorie": "siervuurwerk",
-        "stock": 721
-      },
-      {
-        "id": 7597,
-        "article_number": 7207,
-        "name": "Alvin",
-        "price": 78,
-        "categorie": "siervuurwerk",
-        "stock": 720
-      },
-      {
-        "id": 7598,
-        "article_number": 2545,
-        "name": "Dorota",
-        "price": 57,
-        "categorie": "knalvuurwerk",
-        "stock": 986
-      },
-      {
-        "id": 7599,
-        "article_number": 3828,
-        "name": "Guinka",
-        "price": 43,
-        "categorie": "siervuurwerk",
-        "stock": 796
-      },
-      {
-        "id": 7600,
-        "article_number": 9572,
-        "name": "James",
-        "price": 13,
-        "categorie": "knalvuurwerk",
-        "stock": 219
-      },
-      {
-        "id": 7601,
-        "article_number": 4209,
-        "name": "Dennis",
-        "price": 55,
-        "categorie": "siervuurwerk",
-        "stock": 309
-      },
-      {
-        "id": 7602,
-        "article_number": 4134,
-        "name": "Maureen",
-        "price": 62,
-        "categorie": "knalvuurwerk",
-        "stock": 994
-      },
-      {
-        "id": 7603,
-        "article_number": 2268,
-        "name": "Marsha",
-        "price": 74,
-        "categorie": "siervuurwerk",
-        "stock": 499
-      },
-      {
-        "id": 7604,
-        "article_number": 4574,
-        "name": "Corretta",
-        "price": 14,
-        "categorie": "rotjes",
-        "stock": 641
-      },
-      {
-        "id": 7605,
-        "article_number": 6043,
-        "name": "Alexandra",
-        "price": 82,
-        "categorie": "siervuurwerk",
-        "stock": 856
-      },
-      {
-        "id": 7606,
-        "article_number": 1402,
-        "name": "Kathy",
-        "price": 21,
-        "categorie": "rotjes",
-        "stock": 242
-      },
-      {
-        "id": 7607,
-        "article_number": 9687,
-        "name": "Miguel",
-        "price": 30,
-        "categorie": "rotjes",
-        "stock": 248
-      },
-      {
-        "id": 7608,
-        "article_number": 4564,
-        "name": "Conrade",
-        "price": 78,
-        "categorie": "knalvuurwerk",
-        "stock": 850
-      },
-      {
-        "id": 7609,
-        "article_number": 3040,
-        "name": "Kristy",
-        "price": 29,
-        "categorie": "knalvuurwerk",
-        "stock": 298
-      },
-      {
-        "id": 7610,
-        "article_number": 7115,
-        "name": "Hussain",
-        "price": 55,
-        "categorie": "siervuurwerk",
-        "stock": 448
-      },
-      {
-        "id": 7611,
-        "article_number": 1457,
-        "name": "Bruce",
-        "price": 90,
-        "categorie": "knalvuurwerk",
-        "stock": 892
-      },
-      {
-        "id": 7612,
-        "article_number": 8949,
-        "name": "Asha",
-        "price": 77,
-        "categorie": "siervuurwerk",
-        "stock": 115
-      },
-      {
-        "id": 7613,
-        "article_number": 7545,
-        "name": "Demetrius",
-        "price": 99,
-        "categorie": "siervuurwerk",
-        "stock": 406
-      },
-      {
-        "id": 7614,
-        "article_number": 6544,
-        "name": "Nankun",
-        "price": 73,
-        "categorie": "knalvuurwerk",
-        "stock": 364
-      },
-      {
-        "id": 7615,
-        "article_number": 7739,
-        "name": "Cameron",
-        "price": 60,
-        "categorie": "siervuurwerk",
-        "stock": 923
-      },
-      {
-        "id": 7616,
-        "article_number": 5656,
-        "name": "Rali",
-        "price": 46,
-        "categorie": "knalvuurwerk",
-        "stock": 867
-      },
-      {
-        "id": 7617,
-        "article_number": 3148,
-        "name": "Tricia",
-        "price": 83,
-        "categorie": "siervuurwerk",
-        "stock": 113
-      },
-      {
-        "id": 7618,
-        "article_number": 5867,
-        "name": "Alex",
-        "price": 71,
-        "categorie": "siervuurwerk",
-        "stock": 752
-      },
-      {
-        "id": 7619,
-        "article_number": 4246,
-        "name": "Jesse",
-        "price": 51,
-        "categorie": "rotjes",
-        "stock": 377
-      },
-      {
-        "id": 7620,
-        "article_number": 1293,
-        "name": "Charlyne",
-        "price": 89,
-        "categorie": "rotjes",
-        "stock": 529
-      },
-      {
-        "id": 7621,
-        "article_number": 3624,
-        "name": "Robin",
-        "price": 50,
-        "categorie": "siervuurwerk",
-        "stock": 119
-      },
-      {
-        "id": 7622,
-        "article_number": 6168,
-        "name": "Farhad",
-        "price": 52,
-        "categorie": "rotjes",
-        "stock": 128
-      },
-      {
-        "id": 7623,
-        "article_number": 6410,
-        "name": "Marlene",
-        "price": 54,
-        "categorie": "siervuurwerk",
-        "stock": 693
-      },
-      {
-        "id": 7624,
-        "article_number": 7057,
-        "name": "Marlon",
-        "price": 66,
-        "categorie": "knalvuurwerk",
-        "stock": 530
-      },
-      {
-        "id": 7625,
-        "article_number": 3456,
-        "name": "Alesia",
-        "price": 26,
-        "categorie": "knalvuurwerk",
-        "stock": 325
-      },
-      {
-        "id": 7626,
-        "article_number": 1251,
-        "name": "Tighe",
-        "price": 88,
-        "categorie": "rotjes",
-        "stock": 611
-      },
-      {
-        "id": 7627,
-        "article_number": 3163,
-        "name": "Rosalind",
-        "price": 47,
-        "categorie": "knalvuurwerk",
-        "stock": 378
-      },
-      {
-        "id": 7628,
-        "article_number": 1394,
-        "name": "Vaidas",
-        "price": 80,
-        "categorie": "knalvuurwerk",
-        "stock": 227
-      },
-      {
-        "id": 7629,
-        "article_number": 4732,
-        "name": "Veena",
-        "price": 10,
-        "categorie": "siervuurwerk",
-        "stock": 687
-      },
-      {
-        "id": 7630,
-        "article_number": 2747,
-        "name": "Maurice",
-        "price": 74,
-        "categorie": "knalvuurwerk",
-        "stock": 367
-      },
-      {
-        "id": 7631,
-        "article_number": 6210,
-        "name": "Shirley",
-        "price": 62,
-        "categorie": "knalvuurwerk",
-        "stock": 192
-      },
-      {
-        "id": 7632,
-        "article_number": 4073,
-        "name": "Tariq",
-        "price": 75,
-        "categorie": "knalvuurwerk",
-        "stock": 275
-      },
-      {
-        "id": 7633,
-        "article_number": 1347,
-        "name": "Ronit",
-        "price": 90,
-        "categorie": "knalvuurwerk",
-        "stock": 626
-      },
-      {
-        "id": 7634,
-        "article_number": 7740,
-        "name": "Roger",
-        "price": 45,
-        "categorie": "siervuurwerk",
-        "stock": 791
-      },
-      {
-        "id": 7635,
-        "article_number": 8661,
-        "name": "Emi",
-        "price": 92,
-        "categorie": "rotjes",
-        "stock": 803
-      },
-      {
-        "id": 7636,
-        "article_number": 9528,
-        "name": "Ahila",
-        "price": 92,
-        "categorie": "rotjes",
-        "stock": 547
-      },
-      {
-        "id": 7637,
-        "article_number": 5683,
-        "name": "Brent",
-        "price": 20,
-        "categorie": "rotjes",
-        "stock": 618
-      },
-      {
-        "id": 7638,
-        "article_number": 9141,
-        "name": "Jacob",
-        "price": 31,
-        "categorie": "rotjes",
-        "stock": 374
-      },
-      {
-        "id": 7639,
-        "article_number": 3392,
-        "name": "Clyde",
-        "price": 36,
-        "categorie": "siervuurwerk",
-        "stock": 511
-      },
-      {
-        "id": 7640,
-        "article_number": 7918,
-        "name": "Charlene",
-        "price": 54,
-        "categorie": "rotjes",
-        "stock": 257
-      },
-      {
-        "id": 7641,
-        "article_number": 8722,
-        "name": "Tauras",
-        "price": 46,
-        "categorie": "rotjes",
-        "stock": 573
-      },
-      {
-        "id": 7642,
-        "article_number": 1869,
-        "name": "Pauline",
-        "price": 33,
-        "categorie": "siervuurwerk",
-        "stock": 110
-      },
-      {
-        "id": 7643,
-        "article_number": 8841,
-        "name": "Joslyn",
-        "price": 17,
-        "categorie": "rotjes",
-        "stock": 688
-      },
-      {
-        "id": 7644,
-        "article_number": 6916,
-        "name": "Inessa",
-        "price": 93,
-        "categorie": "siervuurwerk",
-        "stock": 562
-      },
-      {
-        "id": 7645,
-        "article_number": 3358,
-        "name": "Ross",
-        "price": 48,
-        "categorie": "knalvuurwerk",
-        "stock": 210
-      },
-      {
-        "id": 7646,
-        "article_number": 4840,
-        "name": "Suanne",
-        "price": 99,
-        "categorie": "knalvuurwerk",
-        "stock": 928
-      },
-      {
-        "id": 7647,
-        "article_number": 9350,
-        "name": "Kehinde",
-        "price": 83,
-        "categorie": "siervuurwerk",
-        "stock": 842
-      },
-      {
-        "id": 7648,
-        "article_number": 4279,
-        "name": "Rachelle",
-        "price": 59,
-        "categorie": "rotjes",
-        "stock": 932
-      },
-      {
-        "id": 7649,
-        "article_number": 1435,
-        "name": "Minhajuddin",
-        "price": 92,
-        "categorie": "knalvuurwerk",
-        "stock": 143
-      },
-      {
-        "id": 7650,
-        "article_number": 1675,
-        "name": "Larisa",
-        "price": 24,
-        "categorie": "siervuurwerk",
-        "stock": 625
-      },
-      {
-        "id": 7651,
-        "article_number": 4292,
-        "name": "Roberto",
-        "price": 48,
-        "categorie": "rotjes",
-        "stock": 799
-      },
-      {
-        "id": 7652,
-        "article_number": 1751,
-        "name": "Alejandro",
-        "price": 83,
-        "categorie": "siervuurwerk",
-        "stock": 903
-      },
-      {
-        "id": 7653,
-        "article_number": 6347,
-        "name": "Kathleen",
-        "price": 34,
-        "categorie": "rotjes",
-        "stock": 790
-      },
-      {
-        "id": 7654,
-        "article_number": 4378,
-        "name": "Zoriy",
-        "price": 80,
-        "categorie": "knalvuurwerk",
-        "stock": 690
-      },
-      {
-        "id": 7655,
-        "article_number": 8497,
-        "name": "Fritz",
-        "price": 67,
-        "categorie": "rotjes",
-        "stock": 935
-      },
-      {
-        "id": 7656,
-        "article_number": 1702,
-        "name": "Loknath",
-        "price": 62,
-        "categorie": "siervuurwerk",
-        "stock": 710
-      },
-      {
-        "id": 7657,
-        "article_number": 4317,
-        "name": "Timothy",
-        "price": 48,
-        "categorie": "rotjes",
-        "stock": 433
-      },
-      {
-        "id": 7658,
-        "article_number": 4340,
-        "name": "Kyle",
-        "price": 98,
-        "categorie": "rotjes",
-        "stock": 795
-      },
-      {
-        "id": 7659,
-        "article_number": 9351,
-        "name": "Wesley",
-        "price": 99,
-        "categorie": "knalvuurwerk",
-        "stock": 951
-      },
-      {
-        "id": 7660,
-        "article_number": 9018,
-        "name": "Jesus",
-        "price": 78,
-        "categorie": "rotjes",
-        "stock": 979
-      },
-      {
-        "id": 7661,
-        "article_number": 6910,
-        "name": "Weili",
-        "price": 97,
-        "categorie": "rotjes",
-        "stock": 876
-      }
-    ]
+  "data": [{
+    "id": 7562,
+    "article_number": 2566,
+    "name": "Rajae",
+    "price": 58,
+    "categorie": "siervuurwerk",
+    "stock": 599
+  },
+    {
+      "id": 7563,
+      "article_number": 7013,
+      "name": "Cameron",
+      "price": 78,
+      "categorie": "rotjes",
+      "stock": 431
+    },
+    {
+      "id": 7564,
+      "article_number": 1080,
+      "name": "Luping",
+      "price": 25,
+      "categorie": "siervuurwerk",
+      "stock": 289
+    },
+    {
+      "id": 7565,
+      "article_number": 5244,
+      "name": "Irma",
+      "price": 10,
+      "categorie": "rotjes",
+      "stock": 443
+    },
+    {
+      "id": 7566,
+      "article_number": 6614,
+      "name": "Oscar",
+      "price": 89,
+      "categorie": "knalvuurwerk",
+      "stock": 223
+    },
+    {
+      "id": 7567,
+      "article_number": 7829,
+      "name": "Cathryn",
+      "price": 45,
+      "categorie": "knalvuurwerk",
+      "stock": 412
+    },
+    {
+      "id": 7568,
+      "article_number": 8740,
+      "name": "Larina",
+      "price": 51,
+      "categorie": "siervuurwerk",
+      "stock": 312
+    },
+    {
+      "id": 7569,
+      "article_number": 2220,
+      "name": "Harrietta",
+      "price": 41,
+      "categorie": "rotjes",
+      "stock": 709
+    },
+    {
+      "id": 7570,
+      "article_number": 2670,
+      "name": "Clint",
+      "price": 48,
+      "categorie": "knalvuurwerk",
+      "stock": 521
+    },
+    {
+      "id": 7571,
+      "article_number": 5470,
+      "name": "Virgis",
+      "price": 23,
+      "categorie": "knalvuurwerk",
+      "stock": 379
+    },
+    {
+      "id": 7572,
+      "article_number": 7116,
+      "name": "Tomi",
+      "price": 54,
+      "categorie": "siervuurwerk",
+      "stock": 357
+    },
+    {
+      "id": 7573,
+      "article_number": 2080,
+      "name": "Thresa",
+      "price": 23,
+      "categorie": "siervuurwerk",
+      "stock": 305
+    },
+    {
+      "id": 7574,
+      "article_number": 5016,
+      "name": "Martin",
+      "price": 63,
+      "categorie": "siervuurwerk",
+      "stock": 518
+    },
+    {
+      "id": 7575,
+      "article_number": 1492,
+      "name": "Misty",
+      "price": 61,
+      "categorie": "rotjes",
+      "stock": 525
+    },
+    {
+      "id": 7576,
+      "article_number": 1767,
+      "name": "Gale",
+      "price": 38,
+      "categorie": "knalvuurwerk",
+      "stock": 784
+    },
+    {
+      "id": 7577,
+      "article_number": 8557,
+      "name": "Lakshmi",
+      "price": 94,
+      "categorie": "siervuurwerk",
+      "stock": 457
+    },
+    {
+      "id": 7578,
+      "article_number": 8800,
+      "name": "Angelo",
+      "price": 99,
+      "categorie": "siervuurwerk",
+      "stock": 609
+    },
+    {
+      "id": 7579,
+      "article_number": 3702,
+      "name": "Peter",
+      "price": 12,
+      "categorie": "siervuurwerk",
+      "stock": 795
+    },
+    {
+      "id": 7580,
+      "article_number": 8412,
+      "name": "Emir",
+      "price": 12,
+      "categorie": "siervuurwerk",
+      "stock": 865
+    },
+    {
+      "id": 7581,
+      "article_number": 3011,
+      "name": "Biswajit",
+      "price": 55,
+      "categorie": "knalvuurwerk",
+      "stock": 899
+    },
+    {
+      "id": 7582,
+      "article_number": 5113,
+      "name": "John",
+      "price": 65,
+      "categorie": "rotjes",
+      "stock": 651
+    },
+    {
+      "id": 7583,
+      "article_number": 7833,
+      "name": "Dorota",
+      "price": 63,
+      "categorie": "siervuurwerk",
+      "stock": 934
+    },
+    {
+      "id": 7584,
+      "article_number": 4166,
+      "name": "Audrey",
+      "price": 74,
+      "categorie": "rotjes",
+      "stock": 835
+    },
+    {
+      "id": 7585,
+      "article_number": 4495,
+      "name": "Francis",
+      "price": 26,
+      "categorie": "knalvuurwerk",
+      "stock": 957
+    },
+    {
+      "id": 7586,
+      "article_number": 6785,
+      "name": "Wattis",
+      "price": 79,
+      "categorie": "rotjes",
+      "stock": 253
+    },
+    {
+      "id": 7587,
+      "article_number": 1745,
+      "name": "Bern",
+      "price": 80,
+      "categorie": "rotjes",
+      "stock": 808
+    },
+    {
+      "id": 7588,
+      "article_number": 1736,
+      "name": "Leon",
+      "price": 44,
+      "categorie": "rotjes",
+      "stock": 123
+    },
+    {
+      "id": 7589,
+      "article_number": 5849,
+      "name": "Verlene",
+      "price": 68,
+      "categorie": "siervuurwerk",
+      "stock": 224
+    },
+    {
+      "id": 7590,
+      "article_number": 7844,
+      "name": "Nichelle",
+      "price": 18,
+      "categorie": "rotjes",
+      "stock": 319
+    },
+    {
+      "id": 7591,
+      "article_number": 8769,
+      "name": "Beth",
+      "price": 91,
+      "categorie": "rotjes",
+      "stock": 369
+    },
+    {
+      "id": 7592,
+      "article_number": 5468,
+      "name": "Corazon",
+      "price": 23,
+      "categorie": "knalvuurwerk",
+      "stock": 123
+    },
+    {
+      "id": 7593,
+      "article_number": 3683,
+      "name": "Ravi",
+      "price": 82,
+      "categorie": "siervuurwerk",
+      "stock": 226
+    },
+    {
+      "id": 7594,
+      "article_number": 6841,
+      "name": "Hector",
+      "price": 49,
+      "categorie": "siervuurwerk",
+      "stock": 151
+    },
+    {
+      "id": 7595,
+      "article_number": 8617,
+      "name": "Alina",
+      "price": 20,
+      "categorie": "rotjes",
+      "stock": 832
+    },
+    {
+      "id": 7596,
+      "article_number": 4528,
+      "name": "Harpal",
+      "price": 67,
+      "categorie": "siervuurwerk",
+      "stock": 721
+    },
+    {
+      "id": 7597,
+      "article_number": 7207,
+      "name": "Alvin",
+      "price": 78,
+      "categorie": "siervuurwerk",
+      "stock": 720
+    },
+    {
+      "id": 7598,
+      "article_number": 2545,
+      "name": "Dorota",
+      "price": 57,
+      "categorie": "knalvuurwerk",
+      "stock": 986
+    },
+    {
+      "id": 7599,
+      "article_number": 3828,
+      "name": "Guinka",
+      "price": 43,
+      "categorie": "siervuurwerk",
+      "stock": 796
+    },
+    {
+      "id": 7600,
+      "article_number": 9572,
+      "name": "James",
+      "price": 13,
+      "categorie": "knalvuurwerk",
+      "stock": 219
+    },
+    {
+      "id": 7601,
+      "article_number": 4209,
+      "name": "Dennis",
+      "price": 55,
+      "categorie": "siervuurwerk",
+      "stock": 309
+    },
+    {
+      "id": 7602,
+      "article_number": 4134,
+      "name": "Maureen",
+      "price": 62,
+      "categorie": "knalvuurwerk",
+      "stock": 994
+    },
+    {
+      "id": 7603,
+      "article_number": 2268,
+      "name": "Marsha",
+      "price": 74,
+      "categorie": "siervuurwerk",
+      "stock": 499
+    },
+    {
+      "id": 7604,
+      "article_number": 4574,
+      "name": "Corretta",
+      "price": 14,
+      "categorie": "rotjes",
+      "stock": 641
+    },
+    {
+      "id": 7605,
+      "article_number": 6043,
+      "name": "Alexandra",
+      "price": 82,
+      "categorie": "siervuurwerk",
+      "stock": 856
+    },
+    {
+      "id": 7606,
+      "article_number": 1402,
+      "name": "Kathy",
+      "price": 21,
+      "categorie": "rotjes",
+      "stock": 242
+    },
+    {
+      "id": 7607,
+      "article_number": 9687,
+      "name": "Miguel",
+      "price": 30,
+      "categorie": "rotjes",
+      "stock": 248
+    },
+    {
+      "id": 7608,
+      "article_number": 4564,
+      "name": "Conrade",
+      "price": 78,
+      "categorie": "knalvuurwerk",
+      "stock": 850
+    },
+    {
+      "id": 7609,
+      "article_number": 3040,
+      "name": "Kristy",
+      "price": 29,
+      "categorie": "knalvuurwerk",
+      "stock": 298
+    },
+    {
+      "id": 7610,
+      "article_number": 7115,
+      "name": "Hussain",
+      "price": 55,
+      "categorie": "siervuurwerk",
+      "stock": 448
+    },
+    {
+      "id": 7611,
+      "article_number": 1457,
+      "name": "Bruce",
+      "price": 90,
+      "categorie": "knalvuurwerk",
+      "stock": 892
+    },
+    {
+      "id": 7612,
+      "article_number": 8949,
+      "name": "Asha",
+      "price": 77,
+      "categorie": "siervuurwerk",
+      "stock": 115
+    },
+    {
+      "id": 7613,
+      "article_number": 7545,
+      "name": "Demetrius",
+      "price": 99,
+      "categorie": "siervuurwerk",
+      "stock": 406
+    },
+    {
+      "id": 7614,
+      "article_number": 6544,
+      "name": "Nankun",
+      "price": 73,
+      "categorie": "knalvuurwerk",
+      "stock": 364
+    },
+    {
+      "id": 7615,
+      "article_number": 7739,
+      "name": "Cameron",
+      "price": 60,
+      "categorie": "siervuurwerk",
+      "stock": 923
+    },
+    {
+      "id": 7616,
+      "article_number": 5656,
+      "name": "Rali",
+      "price": 46,
+      "categorie": "knalvuurwerk",
+      "stock": 867
+    },
+    {
+      "id": 7617,
+      "article_number": 3148,
+      "name": "Tricia",
+      "price": 83,
+      "categorie": "siervuurwerk",
+      "stock": 113
+    },
+    {
+      "id": 7618,
+      "article_number": 5867,
+      "name": "Alex",
+      "price": 71,
+      "categorie": "siervuurwerk",
+      "stock": 752
+    },
+    {
+      "id": 7619,
+      "article_number": 4246,
+      "name": "Jesse",
+      "price": 51,
+      "categorie": "rotjes",
+      "stock": 377
+    },
+    {
+      "id": 7620,
+      "article_number": 1293,
+      "name": "Charlyne",
+      "price": 89,
+      "categorie": "rotjes",
+      "stock": 529
+    },
+    {
+      "id": 7621,
+      "article_number": 3624,
+      "name": "Robin",
+      "price": 50,
+      "categorie": "siervuurwerk",
+      "stock": 119
+    },
+    {
+      "id": 7622,
+      "article_number": 6168,
+      "name": "Farhad",
+      "price": 52,
+      "categorie": "rotjes",
+      "stock": 128
+    },
+    {
+      "id": 7623,
+      "article_number": 6410,
+      "name": "Marlene",
+      "price": 54,
+      "categorie": "siervuurwerk",
+      "stock": 693
+    },
+    {
+      "id": 7624,
+      "article_number": 7057,
+      "name": "Marlon",
+      "price": 66,
+      "categorie": "knalvuurwerk",
+      "stock": 530
+    },
+    {
+      "id": 7625,
+      "article_number": 3456,
+      "name": "Alesia",
+      "price": 26,
+      "categorie": "knalvuurwerk",
+      "stock": 325
+    },
+    {
+      "id": 7626,
+      "article_number": 1251,
+      "name": "Tighe",
+      "price": 88,
+      "categorie": "rotjes",
+      "stock": 611
+    },
+    {
+      "id": 7627,
+      "article_number": 3163,
+      "name": "Rosalind",
+      "price": 47,
+      "categorie": "knalvuurwerk",
+      "stock": 378
+    },
+    {
+      "id": 7628,
+      "article_number": 1394,
+      "name": "Vaidas",
+      "price": 80,
+      "categorie": "knalvuurwerk",
+      "stock": 227
+    },
+    {
+      "id": 7629,
+      "article_number": 4732,
+      "name": "Veena",
+      "price": 10,
+      "categorie": "siervuurwerk",
+      "stock": 687
+    },
+    {
+      "id": 7630,
+      "article_number": 2747,
+      "name": "Maurice",
+      "price": 74,
+      "categorie": "knalvuurwerk",
+      "stock": 367
+    },
+    {
+      "id": 7631,
+      "article_number": 6210,
+      "name": "Shirley",
+      "price": 62,
+      "categorie": "knalvuurwerk",
+      "stock": 192
+    },
+    {
+      "id": 7632,
+      "article_number": 4073,
+      "name": "Tariq",
+      "price": 75,
+      "categorie": "knalvuurwerk",
+      "stock": 275
+    },
+    {
+      "id": 7633,
+      "article_number": 1347,
+      "name": "Ronit",
+      "price": 90,
+      "categorie": "knalvuurwerk",
+      "stock": 626
+    },
+    {
+      "id": 7634,
+      "article_number": 7740,
+      "name": "Roger",
+      "price": 45,
+      "categorie": "siervuurwerk",
+      "stock": 791
+    },
+    {
+      "id": 7635,
+      "article_number": 8661,
+      "name": "Emi",
+      "price": 92,
+      "categorie": "rotjes",
+      "stock": 803
+    },
+    {
+      "id": 7636,
+      "article_number": 9528,
+      "name": "Ahila",
+      "price": 92,
+      "categorie": "rotjes",
+      "stock": 547
+    },
+    {
+      "id": 7637,
+      "article_number": 5683,
+      "name": "Brent",
+      "price": 20,
+      "categorie": "rotjes",
+      "stock": 618
+    },
+    {
+      "id": 7638,
+      "article_number": 9141,
+      "name": "Jacob",
+      "price": 31,
+      "categorie": "rotjes",
+      "stock": 374
+    },
+    {
+      "id": 7639,
+      "article_number": 3392,
+      "name": "Clyde",
+      "price": 36,
+      "categorie": "siervuurwerk",
+      "stock": 511
+    },
+    {
+      "id": 7640,
+      "article_number": 7918,
+      "name": "Charlene",
+      "price": 54,
+      "categorie": "rotjes",
+      "stock": 257
+    },
+    {
+      "id": 7641,
+      "article_number": 8722,
+      "name": "Tauras",
+      "price": 46,
+      "categorie": "rotjes",
+      "stock": 573
+    },
+    {
+      "id": 7642,
+      "article_number": 1869,
+      "name": "Pauline",
+      "price": 33,
+      "categorie": "siervuurwerk",
+      "stock": 110
+    },
+    {
+      "id": 7643,
+      "article_number": 8841,
+      "name": "Joslyn",
+      "price": 17,
+      "categorie": "rotjes",
+      "stock": 688
+    },
+    {
+      "id": 7644,
+      "article_number": 6916,
+      "name": "Inessa",
+      "price": 93,
+      "categorie": "siervuurwerk",
+      "stock": 562
+    },
+    {
+      "id": 7645,
+      "article_number": 3358,
+      "name": "Ross",
+      "price": 48,
+      "categorie": "knalvuurwerk",
+      "stock": 210
+    },
+    {
+      "id": 7646,
+      "article_number": 4840,
+      "name": "Suanne",
+      "price": 99,
+      "categorie": "knalvuurwerk",
+      "stock": 928
+    },
+    {
+      "id": 7647,
+      "article_number": 9350,
+      "name": "Kehinde",
+      "price": 83,
+      "categorie": "siervuurwerk",
+      "stock": 842
+    },
+    {
+      "id": 7648,
+      "article_number": 4279,
+      "name": "Rachelle",
+      "price": 59,
+      "categorie": "rotjes",
+      "stock": 932
+    },
+    {
+      "id": 7649,
+      "article_number": 1435,
+      "name": "Minhajuddin",
+      "price": 92,
+      "categorie": "knalvuurwerk",
+      "stock": 143
+    },
+    {
+      "id": 7650,
+      "article_number": 1675,
+      "name": "Larisa",
+      "price": 24,
+      "categorie": "siervuurwerk",
+      "stock": 625
+    },
+    {
+      "id": 7651,
+      "article_number": 4292,
+      "name": "Roberto",
+      "price": 48,
+      "categorie": "rotjes",
+      "stock": 799
+    },
+    {
+      "id": 7652,
+      "article_number": 1751,
+      "name": "Alejandro",
+      "price": 83,
+      "categorie": "siervuurwerk",
+      "stock": 903
+    },
+    {
+      "id": 7653,
+      "article_number": 6347,
+      "name": "Kathleen",
+      "price": 34,
+      "categorie": "rotjes",
+      "stock": 790
+    },
+    {
+      "id": 7654,
+      "article_number": 4378,
+      "name": "Zoriy",
+      "price": 80,
+      "categorie": "knalvuurwerk",
+      "stock": 690
+    },
+    {
+      "id": 7655,
+      "article_number": 8497,
+      "name": "Fritz",
+      "price": 67,
+      "categorie": "rotjes",
+      "stock": 935
+    },
+    {
+      "id": 7656,
+      "article_number": 1702,
+      "name": "Loknath",
+      "price": 62,
+      "categorie": "siervuurwerk",
+      "stock": 710
+    },
+    {
+      "id": 7657,
+      "article_number": 4317,
+      "name": "Timothy",
+      "price": 48,
+      "categorie": "rotjes",
+      "stock": 433
+    },
+    {
+      "id": 7658,
+      "article_number": 4340,
+      "name": "Kyle",
+      "price": 98,
+      "categorie": "rotjes",
+      "stock": 795
+    },
+    {
+      "id": 7659,
+      "article_number": 9351,
+      "name": "Wesley",
+      "price": 99,
+      "categorie": "knalvuurwerk",
+      "stock": 951
+    },
+    {
+      "id": 7660,
+      "article_number": 9018,
+      "name": "Jesus",
+      "price": 78,
+      "categorie": "rotjes",
+      "stock": 979
+    },
+    {
+      "id": 7661,
+      "article_number": 6910,
+      "name": "Weili",
+      "price": 97,
+      "categorie": "rotjes",
+      "stock": 876
+    }
+  ]
 }

@@ -90,10 +90,6 @@ const Assortment = class {
     }
 }
 
-Cart.reset();
-Cart.add('test');
-console.log(Cart.items);
-
 //load in items to touchview
 $(function(){
     $.getJSON("assets/products/sample_products.json", function(response) {
@@ -112,11 +108,23 @@ $(function(){
     });
 });
 
-function addToCart(){
-    var value = $(this).val(); // 
-    var getDataVal = $(this).find('.productItem').getAttribute('data-name', 'data-price');
-    var total = 0;
-    console.log(this.data-name)
+$(document).on('click', '.putInCart', function(res) {
+    // Clone hidden cart row
+    let clone = $('.shopCartRow.hidden .row').clone();
+    // get current clicked product
+    let product = $(this).find('.productItem');
+    // Store data in cloned object
+    clone.find('#valueName').html(product.data('name'));
+    clone.find('#valueQty').html(1);
+    clone.find('#valuePrice').html(product.data('price'));
+    // Store in cart
+    $('.cartSection #output').append(clone);
+});
+
+function addToCart($product){
+    let value = $product.val();
+    let getDataVal = $product.find('.productItem').getAttribute('data-name', 'data-price');
+    let total = 0;
 }
 
 $(document).ready(function() {
