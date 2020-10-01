@@ -112,17 +112,17 @@ $(function(){
     });
 });
 
-//onclick function adds data of product to the template and add template to cart
-//
-// function addToCart(this.data.name, this.data.id, this.data.price, this.data.article_number, this.data.stock, this.data.categorie){
-//     var merged = false;
-//     var value = $(this).val;
-//     var getDataVal = $(this.data-name).find('.productItem').getAttribute('data-name', 'data-price');
-//     var total = 0;
-//     console.log(this.data-name)
-// }
+function addToCart(){
+    var value = $(this).val(); // 
+    var getDataVal = $(this).find('.productItem').getAttribute('data-name', 'data-price');
+    var total = 0;
+    console.log(this.data-name)
+}
 
 $(document).ready(function() {
+//onclick function adds data of product to the template and add template to cart
+
+
 
 //         //add to cart functionality (onclick)
 //     outputCart();
@@ -168,7 +168,7 @@ $(document).ready(function() {
 //         $('#output').html(holderHTML);
 //     }
 
-    //datatable
+    //datatable output
     $('[data-selected]')
     $('#data-table').DataTable({
         "paging": false,
