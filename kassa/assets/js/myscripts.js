@@ -27,7 +27,7 @@ for (var i = 0; i < removeCartItemButtons.length; i ++){
 
 function updateCartTotal() {
     var carItemContainer = document.getElementsByClassName('shopcardProducts')[0]
-    car
+
 }
 
 
@@ -41,6 +41,10 @@ function updateCartTotal() {
 
 const Cart = {
     items: [''],
+
+    get price(){
+      return [...this.items.values()].reduce((price, item) => price += item.price, 0);
+    },
 
     reset: function(){
         this.items = [];
@@ -86,11 +90,9 @@ const Assortment = class {
     }
 }
 
-
 Cart.reset();
-Cart.add('apenkots');
+Cart.add('test');
 console.log(Cart.items);
-
 
 //load in items to touchview
 $(function(){
@@ -104,66 +106,67 @@ $(function(){
                 .attr('data-id', el.id)
                 .attr('data-name', el.name)
                 .attr('data-stock', el.stock)
-                .attr('data-categories', el.categories);
+                .attr('data-categorie', el.categorie);
             $('#touchViewProducts').append(card);
         });
     });
 });
 
-//onlick function that adds data to template in cart
-$(function(){
-    $.getJSON("assets/products/sample_products.json", function(response) {
-        $.each(response.data, function (i, el) {
-
-        })
-    })
-})
+//onclick function adds data of product to the template and add template to cart
+//
+// function addToCart(this.data.name, this.data.id, this.data.price, this.data.article_number, this.data.stock, this.data.categorie){
+//     var merged = false;
+//     var value = $(this).val;
+//     var getDataVal = $(this.data-name).find('.productItem').getAttribute('data-name', 'data-price');
+//     var total = 0;
+//     console.log(this.data-name)
+// }
 
 $(document).ready(function() {
+
 //         //add to cart functionality (onclick)
-    outputCart();
-    $(document).on('click', '.productItem', function(){
-        var productInfo = $(this.dataset)[0];
-        productInfo.qty = 1;
-        var productInCart = false;
-
-        $.each(shopcart, function(index, value){
-            if(value.id == productInfo.id){
-                value.qty=parseInt(value.qty) + parseInt(productInfo.qty);
-                productInCart = true;
-            }
-        })
-
-        if(!productInCart){
-            shopcart.push(productInfo);
-        }
-        sessionStorage["sc"]=JSON.stringify(shopcart);
-        outputCart();
-    });
-
+//     outputCart();
+//     $(document).on('click', '.productItem', function(){
+//         var productInfo = $(this.dataset)[0];
+//         productInfo.qty = 1;
+//         var productInCart = false;
+//
+//         $.each(shopcart, function(index, value){
+//             if(value.id == productInfo.id){
+//                 value.qty=parseInt(value.qty) + parseInt(productInfo.qty);
+//                 productInCart = true;
+//             }
+//         })
+//
+//         if(!productInCart){
+//             shopcart.push(productInfo);
+//         }
+//         sessionStorage["sc"]=JSON.stringify(shopcart);
+//         outputCart();
+//     });
 
 //output cart
-    function outputCart(){
-        if(sessionStorage["sc"] != null){
-            shopcart = JSON.parse(sessionStorage["sc"].toString());
-            // console.log(sessionStorage["sc"]);
-        }
-        var holderHTML = "";
-        var total = 0;
-
-        $.each(shopcart, function(index, value){
-            // console.log(value);
-            var subtotal = value.qty * value.price;
-            total = (value.price * value.qty);
-            holderHTML += '<div class="col-5">' + value.name + '</div>' +
-                '<div class="col-1">' + value.qty + '</div>' +
-                '<div class="col-2">' + '&euro;' + value.price + '</div>' +
-                '<div class="col-3">' + '&euro;' + subtotal.toFixed(2) + '</div>' +
-                '<button type="button" class="close"> <span aria-hidden="true">&times;</span> </button>'
-        })
-        // holderHTML += '<div>'+ total +'</div>';
-        $('#output').html(holderHTML);
-    }
+//     function outputCart(){
+//         if(sessionStorage["sc"] != null){
+//             shopcart = JSON.parse(sessionStorage["sc"].toString());
+//             // console.log(sessionStorage["sc"]);
+//         }
+//         var holderHTML = "";
+//         var total = 0;
+//
+//         $.each(shopcart, function(index, value){
+//             // console.log(value);
+//             var subtotal = value.qty * value.price;
+//             total = (value.price * value.qty);
+//             holderHTML += '<div class="col-5">' + value.name + '</div>' +
+//                 '<div class="col-1">' + value.qty + '</div>' +
+//                 '<div class="col-2">' + '&euro;' + value.price + '</div>' +
+//                 '<div class="col-3">' + '&euro;' + subtotal.toFixed(2) + '</div>' +
+//                 '<button type="button" class="close"> <span aria-hidden="true">&times;</span> </button>'
+//         })
+//         // holderHTML += '<div>'+ total +'</div>';
+//         $('#output').html(holderHTML);
+//     }
 
     //datatable
     $('[data-selected]')
@@ -179,7 +182,4 @@ $(document).ready(function() {
         ]
     });
 })
-
-
-
 
