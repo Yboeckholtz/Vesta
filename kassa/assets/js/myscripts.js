@@ -121,10 +121,6 @@ const Assortment = class {
     filterProducts(products){}
 }
 
-Cart.reset();
-Cart.add('apenkots');
-console.log(Cart.items);
-
 //filter function
 // $(".nav-link").click(function() {
 //     var category = $(this).attr('id');
