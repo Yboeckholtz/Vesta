@@ -3,10 +3,13 @@
 <head>
     <title>PyroDesk</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/myscripts.js"></script>
-
+    <script type="application/json" src="sample_products.json"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -21,312 +24,58 @@
 </nav>
 <!--header-->
 
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-8 shoppingSection">
             <!--toggle bar-->
             <div class="row">
                 <div class="col-12 toggleBar">
-                    <button class="btn toggleBtn" onclick="toggle()"> Toggle Button</button>
+                    <button id="toggleBtn" onclick="toggle()">Keyboard View</button>
                 </div>
             </div>
             <!--/toggle bar-->
 
             <div class="row touchViewSection">
-<!--shopping sector-->
-    <!-- touchView -->
-                <!-- Categories menu -->
-                <div class="col-3 categoriesSection"> Categories
+                <!-- shopping sector -->
+                <!-- touchView -->
+                <!-- categories menu -->
+                <div class="col-3 categoriesSection">
                     <div class="categories">
-                        <a class="nav-link" >All</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >Flowerbeds</a>
-                        <a class="nav-link" >All</a>
-                        <a class="nav-link" >Rotjes</a>
-                        <a class="nav-link" >cakes 500 gram</a>
-                        <a class="nav-link" >Fonteinen</a>
+                        <p style="background-color: white; margin-bottom: 0px" > Categories </p>
+                        <a class="nav-link" id="all" href="#">All</a>
+                        <a class="nav-link" id="knalvuurwerk" href="#">Knalvuurwerk</a>
+                        <a class="nav-link" id="rotjes" href="#">Rotjes</a>
+                        <a class="nav-link" id="siervuurwerk" href="#">Siervuurwerk</a>
                     </div>
                 </div>
-                <div class="col-3"></div>
+
                 <!-- categories menu -->
+                <!--                <p style="background-color: white; margin-bottom: 0px" > Products </p>-->
                 <div class="col-9 productItems" >
                     <br>
-                    <div class="row">
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 productCard">
-                            <div class="card">
-                                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width:100%; height: 9vh;">
-                                <div class="container">
-                                    <p> Rotje</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" id="touchViewProducts">
 
                     </div>
                 </div>
             </div>
-    <!--/touchView -->
+            <!--/touchView -->
             <!--Keyboard View -->
             <div class="row keyboardViewSection">
                 <div class="col-12 keyboardViewRow">
-                    Search and add products <br>
-                    Zoek op artikelnummer of naam
-                    <input class="form-control searchBar" type="text" placeholder="Search" aria-label="Search">
-                    <div class="row productTableHeader">
-                        <div class="col-1 tableItem">#</div>
-                        <div class="col-3 tableItem">Product Name</div>
-                        <div class="col-2 tableItem">Free Stock</div>
-                        <div class="col-2 tableItem">Price</div>
-                        <div class="col-4 tableItem">Actions</div>
-                    </div>
-                    <div class="row productTable">
-                        <div class="col-1 tableItem">#</div>
-                        <div class="col-3 tableItem">Product Name</div>
-                        <div class="col-2 tableItem">Free Stock</div>
-                        <div class="col-2 tableItem">Price</div>
-                        <div class="col-4 tableItem">
-                            <button type="button" class="btn keyboardViewButton">Add Free</button>
-                            <button type="button" class="btn keyboardViewButton">Add Free</button>
-                        </div>
-                    </div>
+                    <table id="data-table" class="table table-bordered" style="width: 100%;">
+                        <thead id="tableHead">
+                        <tr>
+                            <th> # </th>
+                            <th> Product name </th>
+                            <th> Free Stock </th>
+                            <th> Price </th>
+                            <th> Action </th>
+                        </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
             <!--/Keyboard View -->
-
-
             <div class="footer">
                 <div class="container">
                     <p class="text-muted"> Developed by Vesta Group</p>
@@ -334,71 +83,74 @@
             </div>
         </div>
         <!--/shopping sector-->
-
         <div class="col-4 cartSection">
             <!--cart-->
             <div class="row">
-                <div class="col-6">Product</div>
+                <div class="col-5">Product</div>
                 <div class="col-1">Pcs.</div>
                 <div class="col-2">Price</div>
-                <div class="col-2">Total</div>
+                <div class="col-3">Total</div>
             </div>
-
             <hr style="background-color: white;">
+            <div id="output" class="row"></div>
+            <div class="row" id="shopcartProducts">
+            </div>
 
-            <div class="row cartItem">
-                <div class="col-6">Big professional Crystal</div>
-                <div class="col-1">1</div>
-                <div class="col-2">$18,99</div>
-                <div class="col-2">$18,99</div>
-            </div>
-            <div class="row cartItem">
-                <div class="col-6">Big professional Crystal</div>
-                <div class="col-1">1</div>
-                <div class="col-2">$189,99</div>
-                <div class="col-2">$189,99</div>
-            </div>
             <div class="row cartCheck">
-                <div class="col-6">Numbers of products</div>
+                <div class="col-5">Number of products</div>
                 <div class="col-1">1</div>
                 <div class="col-2">Subtotal</div>
-                <div class="col-2">$189,99</div>
+                <div class="col-3 total">&euro; 0,00</div>
 
-                <div class="col-6"></div>
-                <div class="col-1"></div>
-                <div class="col-2">Discount($)</div>
-                <div class="col-2" style="text-align: center">/</div>
-
-                <div class="col-6"></div>
-                <div class="col-1"></div>
-                <div class="col-2">Discount(%)</div>
-                <div class="col-2" style="text-align: center; ">/</div>
-
-                <div class="col-6"></div>
+                <div class="col-5"></div>
                 <div class="col-1"></div>
                 <div class="col-2">Total </div>
-                <div class="col-2">$189,99</div>
-
-
-                <div class="col-12 checkoutBtn">
-                    Checkout
-                </div>
-                <div class="col-6 addDiscountBtn">
-                    Add discount
-                </div>
-                <div class="col-6 cancelBtn">
-                    Cancel
-                </div>
+                <div class="col-3">&euro; 0,00</div>
+            </div>
+            <div class="row cartCheck">
+                <div class="col-12 checkoutBtn"> Checkout </div>
+                <div class="col-6 addDiscountBtn"> Add discount </div>
+                <div class="col-6 cancelBtn"> Cancel </div>
             </div>
 
+            <!--buttons -->
+            <!--            </div>-->
             <!--/cart-->
         </div>
     </div>
-
-
 </div>
+<script>
 
 
-</div>
+</script>
+<script type="text/template" id="productCard-template">
+    <div class="col-3 productCard">
+        <a href="#" class="productItem">
+            <div class="card">
+                <img src="assets/images/Firecracker.jpg" alt="Avatar" style="width: 100%; height: 8vh;">
+                <div class="container">
+                    <div class="row" style="height: 6vh; max-width: 20ch;">
+                        <p id="cardName"> </p>
+                    </div>
+
+
+                    <div class="row" style="height: 50%">
+                      <b><p id="cardPrice"></p></b>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</script>
+
+<script type="text/template" id="shopcartRow-template">
+    <div class="row">
+        <div class="col-5" id="valueName"> </div>
+        <div class="col-1" id="valueQty"> </div>
+        <div class="col-2" id="valuePrice"> </div>
+        <div class="col-3" id="valueTotal"> </div>
+    </div>
+</script>
+
 </body>
 </html>
